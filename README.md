@@ -107,15 +107,15 @@ And one more, the ` run.js ` file:
 ```
 var myawesomeplugin = { // should be the same as your plugin directory name and config.json 'name' field
         /*
-        * This is the only method the MUST be implemented, however, implementation is up to you.
+        * This is the only method that MUST be implemented, however, implementation is up to you.
         */
-        run: function(objId){   // objId is a unique id for the html element tied to this plugin instance
+        run: function(objId){   // objId is a unique id for the html element bound to this plugin instance
             var obj = jQuery('#'+objId);
             obj.html(obj.attr('content'));
             obj.myawesomeplugin(this.getSettings(obj));
         },
         /*
-        * This is specific to this plugin and is totally optional for your plugin.
+        * This is specific to the plugin and is totally optional
         */
         getSettings: function(obj){
             return {
