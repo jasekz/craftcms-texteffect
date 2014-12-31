@@ -73,7 +73,7 @@ And the corresponding ` config.json ` file:
 ```
 {
     "name": "myawesomeplugin", // should be the same as your plugin directory name
-    "label": "ArcText", // for display in the Craft views
+    "label": "My Awesome Plugin", // for display in the Craft views
     "url": "http://docs.to.myawesomeplugin.com", // this will be the link in the preset options section
     "installed": true, // if false, plugin will be disabled
     "scripts": ["js/myawesomeplugin.js"], // plugin scripts
@@ -124,7 +124,7 @@ var myawesomeplugin = { // should be the same as your plugin directory name and 
 }
 ```
 
-If you'd like to see more details on how to do this, please see one of the included plugins.
+If you'd like to see more details on how to do this, please see one of the included plugins in ` plugins/texteffect/resources `.
 
 ## Changelog
 
