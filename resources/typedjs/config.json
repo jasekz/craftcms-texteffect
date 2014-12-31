@@ -1,0 +1,51 @@
+{
+    "name": "typedjs",
+    "label": "Typed.js",
+    "url": "http://www.mattboldt.com/demos/typed-js/",
+    "installed": true,
+    "scripts": ["js/typed.min.js"],
+    "optionFields": [
+        {
+            "type": "text",
+            "name": "typeSpeed",
+            "label": "Type Speed",
+            "instructions": "How fast should we type? (lower is faster, including negative values)"
+        },
+        {
+            "type": "text",
+            "name": "startDelay",
+            "label": "Start Delay",
+            "instructions": "How long should we wait before starting to type? (in milliseconds)"
+        },
+        {
+            "type": "text",
+            "name": "backSpeed",
+            "label": "Back Speed",
+            "instructions": "How fast should we backspace? (lower is faster, including negative values)"
+        },
+        {
+            "type": "text",
+            "name": "backDelay",
+            "label": "Back Delay",
+            "instructions": "How long should we wait before starting to backspace? (in milliseconds)"
+        },
+        {
+            "type": "lightswitch",
+            "name": "doLoop",
+            "label": "Loop",
+            "instructions": "Do we want to loop?"
+        },
+        {
+            "type": "text",
+            "name": "loopCount",
+            "label": "Loop Count",
+            "instructions": "How many times should we loop?"
+        },
+        {
+            "type": "lightswitch",
+            "name": "showCursor",
+            "label": "Show Cursor",
+            "instructions": "Do we want to display a cursor?"
+        }
+    ]
+}

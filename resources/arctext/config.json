@@ -1,0 +1,28 @@
+{
+    "name": "arctext",
+    "label": "ArcText",
+    "url": "http://tympanus.net/codrops/2012/01/24/arctext-js-curving-text-with-css3-and-jquery/",
+    "installed": true,
+    "scripts": ["js/jquery.arctext.min.js"],
+    "optionFields": [
+        {
+            "type": "text",
+            "name": "radius",
+            "label": "Radius",
+            "instructions": "What radius should the arc have?"
+        },
+        {
+            "type": "lightswitch",
+            "name": "rotate",
+            "label": "Rotate",
+            "instructions": "Should the text letters be rotated?"
+        },
+        {
+            "type": "select",
+            "name": "dir",
+            "label": "Direction",
+            "options": [{"label":"up", "value":"-1"},{"label":"down", "value":"0"}],
+            "instructions": "In which direction should the arc curve?"
+        }
+    ]
+}

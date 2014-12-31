@@ -1,0 +1,76 @@
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% block main %}
+
+<form id="texteffect-form" method="post" accept-charset="UTF-8" data-saveshortcut="1" data-saveshortcut-redirect="{{ continueEditingUrl }}">
+    {{ getCsrfInput() }}
+    <input type="hidden" name="action" value="textEffect/savePreset">
+    <input type="hidden" name="redirect" value="texteffect">    
+    <input type="hidden" name="plugin" value="{{ texteffectPlugin }}">
+    {% if preset is defined and preset.id %}
+    <input type="hidden" name="id" value="{{ preset.id }}">
+    {% endif %}
+    <div class="grid first">
+        <div class="item" data-position="left" data-min-colspan="2" data-max-colspan="3">
+            <div id="fields" class="pane">
+                <h2>General Info</h2>
+			    {{ forms.textField({
+			        label: "Title"|t,
+			        id: 'title',
+			        name: 'title',
+			        value: (preset is defined ? (craft.request.getPost('id') ? preset.title : preset) :  null),
+                    errors: (preset is defined ? preset.getErrors('title') : null)
+			    }) }}	
+			    
+                {% set statusInput %}
+                {{ forms.lightswitch({
+                    id: 'enabled',
+                    name: 'enabled',
+                    on: (preset is defined and preset.enabled ? true : false)
+                 }) }}
+                {% endset %}
+
+                {{ forms.field({
+                    label: "Enabled"|t,
+                    id: 'enabled'
+                    }, statusInput) }}		    
+
+                {{ forms.textareaField({
+                    label: "Notes"|t,
+                    id: 'notes',
+                    name: 'notes',
+                    value: (preset is defined ? preset.notes : null),
+                    errors: (preset is defined ? preset.getErrors('notes') : null)
+                }) }}				    
+            </div>
+        </div><!--/item-->
+        <div class="item" data-position="right" data-colspan="1">
+            <div id="fields" class="pane">
+                <h2>{{ config.label ? config.label : 'Plugin'|t }} Options</h2>   
+                {% if config.url %}
+                <a href="{{ config.url }}" target="_blank">Plugin Docs</a>
+                {% endif %}                 
+                
+                {% if config.optionFields %}
+                    {% for option in config.optionFields %}
+                        {{ option|optionField(preset) }}
+                    {% endfor %} 
+                {% else %}
+                <p>{{ 'No options avaialble.'|t }}</p>  
+                {% endif %}
+                       
+                <div class="right">
+                    <input type="button" class="btn small formsubmit" value="{{ 'Delete'|t }}" data-action="textEffect/deletePreset"
+                                            data-confirm="{{ 'Are you sure you want to delete this preset?'|t }}"
+                                            data-redirect="texteffect">
+                </div>        
+            </div>
+            <div class="buttons">
+                <input type="submit" class="btn submit" value="{{ 'Save'|t }}">
+                <a href="{{ siteUrl }}admin/texteffect" id="cancel" class="btn" tabindex="0">{{ 'Cancel'|t }}</a>
+            </div>     
+        </div>
+    </div>
+</form>
+{% endblock %}

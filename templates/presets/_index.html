@@ -1,0 +1,23 @@
+{% extends "_layouts/elementindex" %}
+{% set title = "Presets"|t %}
+{% set elementType = 'TextEffect_Preset' %}
+
+{% set plugins = craft.texteffect.getPlugins() %}
+
+{% block sidebar %}
+
+    {% if plugins|length %}
+        <div class="buttons">
+            <div class="btn submit menubtn add icon">{{ "New Preset"|t }}</div>
+            <div class="menu">
+                <ul>
+                    {% for plugin in plugins %}
+                        <li><a href="{{ url('texteffect/'~plugin.name~'/new') }}">{{ plugin.label|t }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}

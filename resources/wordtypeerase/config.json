@@ -1,0 +1,57 @@
+{
+    "name": "wordtypeerase",
+    "label": "Word Type Erase",
+    "url": "https://github.com/benrlodge/wordTypeErase",
+    "installed": true,
+    "scripts": ["js/wordtypeerase.min.js"],
+    "optionFields": [
+        {
+            "type": "text",
+            "name": "delayOfStart",
+            "label": "Delay of Start",
+            "instructions": "Delay before typing begins"
+        },
+        {
+            "type": "text",
+            "name": "letterSpeed",
+            "label": "Letter Speed",
+            "instructions": "Delay between letters typed"
+        },
+        {
+            "type": "text",
+            "name": "highlightSpeed",
+            "label": "Highlight Speed",
+            "instructions": "Word highlight speed"
+        },
+        {
+            "type": "text",
+            "name": "delayOfWords",
+            "label": "Delay of Words",
+            "instructions": "Delay between words being typed"
+        },
+        {
+            "type": "lightswitch",
+            "name": "naturalTypingSpeed",
+            "label": "Natural Typing Speed",
+            "instructions": "Randomizes the delay between letters to simulate a more natural typing"
+        },
+        {
+            "type": "lightswitch",
+            "name": "doLoop",
+            "label": "Loop",
+            "instructions": "Whether the animation should be restarted at the end"
+        },
+        {
+            "type": "text",
+            "name": "delayBetweenLoop",
+            "label": "Delay Between Loop",
+            "instructions": "Delay between loop"
+        },
+        {
+            "type": "color",
+            "name": "highlightColor",
+            "label": "Highlight Color",
+            "instructions": "Highlight color"
+        }
+    ]
+}
