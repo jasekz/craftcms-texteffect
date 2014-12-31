@@ -64,8 +64,7 @@ Plugin page: https://github.com/benrlodge/wordTypeErase
 ## Adding Your Own Plugins
 To add your own plugins, it's a rather straight forward process and does not involve any modification to the TextEffect code.  You simply add your plugin to the ` plugins/texteffect/resources ` directory, add a ` config.json ` file, create a ` run.js ` file, and you're on your way.  The following structure must be adhered to:
 ```
-texteffect
-|_ plugins
+  texteffect
    |_ resources
      |_ myawesomeplugin // name of your plugin
        |_js // this can be anything and is defined in your config.json file
