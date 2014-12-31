@@ -16,6 +16,10 @@ Creating a new preset is simple.  To do so, simply click on the "TextEffects Pre
 **NOTE:** When creating a preset, the title will by 'slugified'.  This will be the field you will use to specify the ` preset ` in the template.
 
 ## Usage
+First, for the included plugins to work, you must include jQuery.  If you don't use jQuery in your site, you can embed the following:
+ ```
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ ```
 
 After creating a preset, the most basic way to output in a template is like this:
 
