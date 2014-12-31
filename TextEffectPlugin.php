@@ -30,7 +30,7 @@ class TextEffectPlugin extends BasePlugin
      */
     public function getName()
     {
-        return 'Text Effect';
+        return 'Text Effect Presets';
     }
 
     /**
